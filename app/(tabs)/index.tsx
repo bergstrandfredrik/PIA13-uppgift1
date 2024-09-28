@@ -1,4 +1,4 @@
-import { View, Image, StyleSheet, Platform } from 'react-native';
+import { Text, View, Image, StyleSheet, Platform } from 'react-native';
 
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -7,7 +7,31 @@ import { ThemedView } from '@/components/ThemedView';
 
 export default function HomeScreen() {
   return (
-    <View></View>
+    <View style={{backgroundColor:"lightblue", flex: 1}}>
+      <View style={{backgroundColor: "red", height: 150, justifyContent: "center", alignItems: "center"}}>
+        <Text style={{fontSize: 50}}>
+          Röd
+          </Text>
+        </View>
+      <View style={{flexDirection: "row"}}>
+        <View style={{backgroundColor: "green", flex: 1, height: 150}}>
+          <Text style={{fontSize: 50}}>
+            Grön
+            </Text>
+            </View>
+        <View style={{backgroundColor: "yellow", flex: 1, height: 150}}></View>
+      </View>
+      <View style={{flex: 1, flexDirection: "row"}}>
+        <View style={{backgroundColor: "red", flex: 4, height: 100}}></View>
+        <View style={{backgroundColor: "black", flex: 1, height: 100}}></View>
+      </View>
+      <View style={{flex: 1}}></View>
+      <View style={{ height: 80, backgroundColor: "orange", justifyContent: "center", alignItems: "flex-end"}}>
+        <Text style={{fontSize: 50}}>
+          Orange
+          </Text>
+          </View>
+    </View>
   );
 }
 
